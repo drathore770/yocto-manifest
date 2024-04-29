@@ -5,18 +5,22 @@
   <!-- remote servers to query -->
   <remote name="openembedded"    alias="origin"  fetch="https://git.openembedded.org/" />
   <remote name="yocto"           alias="origin"  fetch="https://git.yoctoproject.org/" />
-  <remote name="clang"           alias="origin"  fetch="https://github.com/kraj/meta-clang" />
+  <remote name="clang"           alias="origin"  fetch="https://github.com/kraj/" />
   
   <!-- YOCTO & OE -->
 
   <!-- OpenEmbedded core layer and feature supportive layer -->
   <project name="openembedded-core"    path="source/openembedded-core"    remote="openembedded"  revision="refs/heads/scarthgap"  upstream="scarthgap" />
   <project name="meta-openembedded"    path="source/meta-openembedded"    remote="openembedded"  revision="refs/heads/scarthgap"  upstream="scarthgap" />
+  <project name="bitbake"              path="source/bitbake"              remote="openembedded"  revision="2.8" />
 
   <!-- meta-virtualization -->
   <project name="meta-virtualization"  path="source/meta-virtualization"  remote="yocto"  revision="refs/heads/scarthgap"  upstream="scarthgap"/>
 
   <!-- SELinux layer -->
   <project name="meta-selinux"         path="source/meta-selinux"         remote="yocto"  revision="refs/heads/scarthgap"  upstream="scarthgap"/>
+
+  <!-- meta clang -->
+  <project name="meta-clang"     path="source/meta-clang"        remote="clang"  revision="refs/heads/scarthgap"  upstream="scarthgap"/>
 
 </manifest>
